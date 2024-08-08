@@ -1276,12 +1276,12 @@ again:
 				*event = FDEVP_CNX_SHUTDOWN;
 				break;
 				
-#ifndef OLD_SCTP_SOCKET_API
-			case SCTP_NOTIFICATIONS_STOPPED_EVENT:
-				TRACE_DEBUG(INFO, "Received SCTP_NOTIFICATIONS_STOPPED_EVENT notification, marking the association in error state");
-				*event = FDEVP_CNX_ERROR;
-				break;
-#endif	/*  OLD_SCTP_SOCKET_API */		
+//#ifndef OLD_SCTP_SOCKET_API
+//			case SCTP_NOTIFICATIONS_STOPPED_EVENT:
+//				TRACE_DEBUG(INFO, "Received SCTP_NOTIFICATIONS_STOPPED_EVENT notification, marking the association in error state");
+//				*event = FDEVP_CNX_ERROR;
+//				break;
+//#endif	/*  OLD_SCTP_SOCKET_API */		
 			
 			default:	
 				TRACE_DEBUG(FULL, "Received unknown notification %d, ignored", notif->sn_header.sn_type);

@@ -120,7 +120,7 @@ static void test_casptr_equal(abts_case *tc, void *data)
 
 static void test_casptr_equal_nonnull(abts_case *tc, void *data)
 {
-    int a, b;
+    int a = 0, b = 0;
     void *target_ptr = &a;
     void *old_ptr;
 
@@ -131,7 +131,7 @@ static void test_casptr_equal_nonnull(abts_case *tc, void *data)
 
 static void test_casptr_notequal(abts_case *tc, void *data)
 {
-    int a, b;
+    int a = 0, b = 0;
     void *target_ptr = &a;
     void *old_ptr;
 

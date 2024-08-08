@@ -316,8 +316,7 @@ struct cnxctx * fd_cnx_cli_connect_tcp(sSA * sa /* contains the port already */,
 	/* Generate the names for the object */
 	{
 		int  rc;
-		
-		snprintf(cnx->cc_id, sizeof(cnx->cc_id), CC_ID_HDR "TCP,#%d->%s", cnx->cc_socket, sa_buf);
+		snprintf(cnx->cc_id,sizeof(cnx->cc_id), CC_ID_HDR "TCP,#%d->%s", cnx->cc_socket, sa_buf);
 		
 		/* ...Name for log messages */
 		rc = getnameinfo(sa, addrlen, cnx->cc_remid, sizeof(cnx->cc_remid), NULL, 0, NI_NUMERICHOST);

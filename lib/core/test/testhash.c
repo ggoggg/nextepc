@@ -45,7 +45,9 @@ static void dump_hash(hash_t *h, char str[][MAX_LTH])
         i++;
     }
     str[i][0]='\0';
-    sprintf(str[i], "%s#entries %d\n", str[i], i);
+    int tst_size = snprintf(NULL, 0,"%s#entries %d\n", str[i], i);
+
+    snprintf(str[i],tst_size, "%s#entries %d\n", str[i], i);
 
     /* Sort the result strings so that they can be checked for expected results easily,
      * without having to worry about platform quirks
